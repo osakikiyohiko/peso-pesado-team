@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Sobre o projeto
 
-Site institucional estático da **Peso Pesado Team**, academia fundada em 2000 por Elcio vicente
+Site institucional estático da **Peso Pesado Team**, academia fundada em 2000 por Elcio Vicente
 Piccolo Jr. ("Bolado"), faixa preta 5º grau, oferecendo Jiu-Jitsu, Muay Thai, Boxe, Karatê
 Kyokushin e MMA. Site simples, sem build system, feito em HTML/CSS/JS puro (sem framework, sem
 dependências, sem gerenciador de pacotes).
