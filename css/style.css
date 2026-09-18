@@ -152,13 +152,6 @@ h1, h2, h3 {
   margin: 0 auto 2rem;
 }
 
-.hero-content .tagline {
-  color: var(--color-text);
-  font-weight: 600;
-  font-size: 1.2rem;
-  max-width: 560px;
-  margin: 2.5rem auto 0;
-}
 
 .hero-content .lema {
   color: var(--color-accent);
@@ -481,6 +474,14 @@ h1, h2, h3 {
   color: var(--color-muted);
   font-size: 0.85rem;
   border-top: 1px solid #262626;
+}
+
+.site-footer .tagline {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  max-width: 560px;
+  margin: 0 auto 1rem;
 }
 
 /* Schedule modal */
