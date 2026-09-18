@@ -39,7 +39,7 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
 ## Conteúdo pendente
 
 O fundador (Elcio "Bolado") aparece em duas seções: `#fundador` (destaque, layout foto+texto) e
-como o único card em `#professores` — isso é intencional, não duplicação por engano. Outros
-instrutores devem ser adicionados apenas em `#professores`, como novos `.card` dentro de
-`.cards`, seguindo o padrão com `.card-photo`. Se o cronograma de aulas mudar, atualizar a tabela
-em `#horarios` (os dados vieram da imagem em `Imagens/grade de aulas/`).
+também como card em `#professores` — isso é intencional, não duplicação por engano. Novos
+instrutores (além do fundador) devem ser adicionados apenas em `#professores`, como novos
+`.card` dentro de `.cards`, seguindo o padrão com `.card-photo`. Se o cronograma de aulas mudar,
+atualizar a tabela em `#horarios` (os dados vieram da imagem em `Imagens/grade de aulas/`).
