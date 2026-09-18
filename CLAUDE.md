@@ -30,7 +30,7 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
 - `js/script.js` — comportamentos da página: ano do rodapé, toggle do menu mobile (`.open` em
   `#navLinks`), e o modal de agendamento (`#modalOverlay`) que monta uma mensagem com os dados do
   formulário e abre o WhatsApp (`wa.me`) com o texto pré-preenchido ao enviar.
-- `img/` — imagens usadas pelo site (logo, foto do professor, foto da turma), referenciadas
+- `img/` — imagens usadas pelo site (logo, fotos dos professores, foto da turma), referenciadas
   com nomes simples para evitar espaços em URLs.
 - `Imagens/` — material-fonte original enviado (logo, foto do professor, foto da turma e a
   imagem do cronograma de aulas 2026 usada como base para a tabela em `#horarios`). Não é
@@ -39,7 +39,10 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
 ## Conteúdo pendente
 
 O fundador (Elcio "Bolado") aparece em duas seções: `#fundador` (destaque, layout foto+texto) e
-também como card em `#professores` — isso é intencional, não duplicação por engano. Novos
-instrutores (além do fundador) devem ser adicionados apenas em `#professores`, como novos
-`.card` dentro de `.cards`, seguindo o padrão com `.card-photo`. Se o cronograma de aulas mudar,
-atualizar a tabela em `#horarios` (os dados vieram da imagem em `Imagens/grade de aulas/`).
+também como card em `#professores` — isso é intencional, não duplicação por engano. A ordem dos
+cards em `#professores` foi definida pelo usuário (Elcio, Rodrigo, Fernando, Alberto, Iury) e não
+é alfabética nem cronológica — preservar essa ordem ao adicionar/reordenar. Novos instrutores
+devem ser adicionados como novos `.card` dentro de `.cards`, seguindo o padrão com
+`.card-photo`; nem todo card tem parágrafo de descrição além da faixa — só incluir quando houver
+informação real sobre o papel do instrutor. Se o cronograma de aulas mudar, atualizar a tabela em
+`#horarios` (os dados vieram da imagem em `Imagens/grade de aulas/`).
