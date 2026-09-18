@@ -32,9 +32,34 @@
       <h1>Peso Pesado Team</h1>
       <p>Jiu-Jitsu, Muay Thai, Boxe, Karatê Kyokushin e MMA. Tradição, disciplina e evolução no tatame desde 2000.</p>
       <p class="lema">"Sozinhos somos fortes, juntos somos invencíveis"</p>
-      <a href="#contato" class="btn">Fale Conosco</a>
+      <div class="hero-buttons">
+        <button type="button" class="btn" id="scheduleBtn">Agende Aula Gratuita</button>
+        <a href="#contato" class="btn btn-outline">Fale Conosco</a>
+      </div>
     </div>
   </section>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+      <h3 id="modalTitle">Agende sua Aula Experimental Gratuita</h3>
+      <form id="scheduleForm">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="field">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn">Solicitar</button>
+      </form>
+    </div>
+  </div>
 
   <section id="sobre" class="section sobre-section">
     <div class="sobre-text">
