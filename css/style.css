@@ -123,7 +123,7 @@ h1, h2, h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('../img/logo.jpg');
+  background-image: url('../img/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: min(90vw, 700px);
