@@ -4,8 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Sobre o projeto
 
-Site institucional estático da **Peso Pesado Team**, academia fundada em 2000 por Elcio Vicente
-Piccollo Jr. ("Bolado"), faixa preta 5º grau, oferecendo Jiu-Jitsu, Muay Thai, Boxe, Karatê
+Site institucional estático da **Peso Pesado Team**, academia fundada em 2000 por Elcio vicente
+Piccolo Jr. ("Bolado"), faixa preta 5º grau, oferecendo Jiu-Jitsu, Muay Thai, Boxe, Karatê
 Kyokushin e MMA. Site simples, sem build system, feito em HTML/CSS/JS puro (sem framework, sem
 dependências, sem gerenciador de pacotes).
 
@@ -22,12 +22,14 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
 ## Estrutura
 
 - `index.html` — única página do site, dividida em seções por `id` (`#sobre`, `#modalidades`,
-  `#professores`, `#horarios`, `#contato`) referenciadas pelo menu de navegação.
+  `#fundador`, `#professores`, `#horarios`, `#localizacao`, `#contato`) referenciadas pelo menu
+  de navegação.
 - `css/style.css` — todo o estilo, usando variáveis CSS em `:root` para cores (tema escuro com
   destaque em amarelo/dourado, cor predominante da equipe). Breakpoint responsivo único em
   `720px` para o menu mobile.
-- `js/script.js` — apenas dois comportamentos: atualizar o ano do rodapé e alternar a classe
-  `.open` do menu mobile (`#navLinks`) ao clicar no botão hambúrguer (`#navToggle`).
+- `js/script.js` — comportamentos da página: ano do rodapé, toggle do menu mobile (`.open` em
+  `#navLinks`), e o modal de agendamento (`#modalOverlay`) que monta uma mensagem com os dados do
+  formulário e abre o WhatsApp (`wa.me`) com o texto pré-preenchido ao enviar.
 - `img/` — imagens usadas pelo site (logo, foto do professor, foto da turma), referenciadas
   com nomes simples para evitar espaços em URLs.
 - `Imagens/` — material-fonte original enviado (logo, foto do professor, foto da turma e a
@@ -36,7 +38,8 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
 
 ## Conteúdo pendente
 
-A seção `#professores` tem apenas um professor cadastrado (Elcio "Bolado"); outros instrutores
-podem ser adicionados como novos `.card` dentro de `.cards`, seguindo o padrão com `.card-photo`.
-Se o cronograma de aulas mudar, atualizar a tabela em `#horarios` (os dados vieram da imagem em
-`Imagens/grade de aulas/`).
+O fundador (Elcio "Bolado") aparece em duas seções: `#fundador` (destaque, layout foto+texto) e
+como o único card em `#professores` — isso é intencional, não duplicação por engano. Outros
+instrutores devem ser adicionados apenas em `#professores`, como novos `.card` dentro de
+`.cards`, seguindo o padrão com `.card-photo`. Se o cronograma de aulas mudar, atualizar a tabela
+em `#horarios` (os dados vieram da imagem em `Imagens/grade de aulas/`).

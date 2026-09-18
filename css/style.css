@@ -258,6 +258,45 @@ h1, h2, h3 {
   border: 1px solid #262626;
 }
 
+/* Fundador */
+.founder-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.founder-section h2 {
+  flex-basis: 100%;
+}
+
+.founder-photo {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: 50% 5%;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent);
+}
+
+.founder-text {
+  flex: 1 1 320px;
+}
+
+.founder-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.founder-text .faixa {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
 /* Cards (Professores) */
 .cards {
   display: grid;
