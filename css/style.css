@@ -226,6 +226,14 @@ h1, h2, h3 {
   padding-left: 0.75rem;
 }
 
+.section .subtitle {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
 .section p {
   color: var(--color-muted);
   max-width: 750px;
