@@ -152,6 +152,14 @@ h1, h2, h3 {
   margin: 0 auto 2rem;
 }
 
+.hero-content .tagline {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.2rem;
+  max-width: 560px;
+  margin: 0 auto 1rem;
+}
+
 .hero-content .lema {
   color: var(--color-accent);
   font-style: italic;
