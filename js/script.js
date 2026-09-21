@@ -29,37 +29,39 @@ function closeModal() {
   modalOverlay.classList.remove('open');
 }
 
-scheduleBtn.addEventListener('click', openModal);
-modalClose.addEventListener('click', closeModal);
+if (scheduleBtn) {
+  scheduleBtn.addEventListener('click', openModal);
+  modalClose.addEventListener('click', closeModal);
 
-modalOverlay.addEventListener('click', (event) => {
-  if (event.target === modalOverlay) {
+  modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modalOverlay.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  scheduleForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    const mensagem =
+      'Olá! Gostaria de agendar uma aula experimental gratuita.\n\n' +
+      `Nome: ${nome}\n` +
+      `Telefone: ${telefone}\n` +
+      `E-mail: ${email}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+
+    scheduleForm.reset();
     closeModal();
-  }
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && modalOverlay.classList.contains('open')) {
-    closeModal();
-  }
-});
-
-scheduleForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const nome = document.getElementById('nome').value.trim();
-  const telefone = document.getElementById('telefone').value.trim();
-  const email = document.getElementById('email').value.trim();
-
-  const mensagem =
-    'Olá! Gostaria de agendar uma aula experimental gratuita.\n\n' +
-    `Nome: ${nome}\n` +
-    `Telefone: ${telefone}\n` +
-    `E-mail: ${email}`;
-
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, '_blank');
-
-  scheduleForm.reset();
-  closeModal();
-});
+  });
+}
