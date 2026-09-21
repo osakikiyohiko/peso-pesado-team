@@ -682,16 +682,30 @@ h1, h2, h3 {
 
   .nav-cta-mobile {
     display: block;
-    padding: 0.85rem 1.5rem;
   }
 
   .nav-cta-mobile .btn {
+    display: block;
     width: 100%;
-    text-align: center;
-    padding: 0.85rem 1.5rem;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
+    background: none;
+    border: none;
+    border-radius: 0;
+    color: var(--color-accent);
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: normal;
+    padding: 1rem 1.5rem;
     white-space: nowrap;
+    transition: color 0.2s;
+  }
+
+  .nav-cta-mobile .btn:hover {
+    background: none;
+    border-color: transparent;
+    color: var(--color-accent-dark);
+    transform: none;
   }
 }
 
