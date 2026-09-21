@@ -508,11 +508,12 @@ h1, h2, h3 {
   align-items: center;
   gap: 0.6rem;
   font-weight: 600;
+  color: var(--color-accent);
   transition: color 0.2s;
 }
 
 .contact-list a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 .contact-list .icon {
