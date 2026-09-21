@@ -15,12 +15,13 @@ navLinks.querySelectorAll('a').forEach((link) => {
 
 const WHATSAPP_NUMBER = '5511994099317';
 
-const scheduleBtn = document.getElementById('scheduleBtn');
+const scheduleTriggers = document.querySelectorAll('.schedule-trigger');
 const modalOverlay = document.getElementById('modalOverlay');
 const modalClose = document.getElementById('modalClose');
 const scheduleForm = document.getElementById('scheduleForm');
 
 function openModal() {
+  navLinks.classList.remove('open');
   modalOverlay.classList.add('open');
   document.getElementById('nome').focus();
 }
@@ -29,8 +30,8 @@ function closeModal() {
   modalOverlay.classList.remove('open');
 }
 
-if (scheduleBtn) {
-  scheduleBtn.addEventListener('click', openModal);
+if (scheduleTriggers.length) {
+  scheduleTriggers.forEach((trigger) => trigger.addEventListener('click', openModal));
   modalClose.addEventListener('click', closeModal);
 
   modalOverlay.addEventListener('click', (event) => {

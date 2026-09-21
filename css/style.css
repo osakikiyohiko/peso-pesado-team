@@ -63,6 +63,7 @@ h1, h2, h3 {
   font-weight: 800;
   text-transform: uppercase;
   color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .logo-img {
@@ -73,6 +74,9 @@ h1, h2, h3 {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 0.5rem;
   gap: 2rem;
   list-style: none;
 }
@@ -87,6 +91,18 @@ h1, h2, h3 {
 
 .nav-links a:hover {
   color: var(--color-accent-dark);
+}
+
+.nav-cta-mobile {
+  display: none;
+}
+
+.btn.btn-nav {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-toggle {
@@ -648,7 +664,7 @@ h1, h2, h3 {
   }
 
   .nav-links.open {
-    max-height: 300px;
+    max-height: 420px;
   }
 
   .nav-links li {
@@ -658,6 +674,23 @@ h1, h2, h3 {
   .nav-links a {
     display: block;
     padding: 1rem 1.5rem;
+  }
+
+  .nav-cta-desktop {
+    display: none;
+  }
+
+  .nav-cta-mobile {
+    display: block;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .nav-cta-mobile .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
   }
 
   .hero-content h1 {
