@@ -47,7 +47,7 @@ h1, h2, h3 {
 }
 
 .navbar {
-  max-width: var(--max-width);
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -77,7 +77,7 @@ h1, h2, h3 {
   flex-wrap: wrap;
   justify-content: flex-end;
   row-gap: 0.5rem;
-  gap: 2rem;
+  gap: 1.25rem;
   list-style: none;
 }
 
@@ -644,7 +644,7 @@ h1, h2, h3 {
 }
 
 /* Responsive nav */
-@media (max-width: 720px) {
+@media (max-width: 1300px) {
   .nav-toggle {
     display: flex;
   }
@@ -664,7 +664,7 @@ h1, h2, h3 {
   }
 
   .nav-links.open {
-    max-height: 420px;
+    max-height: 640px;
   }
 
   .nav-links li {
@@ -691,8 +691,11 @@ h1, h2, h3 {
     padding: 0.85rem 1.5rem;
     font-size: 1rem;
     letter-spacing: 0.05em;
+    white-space: nowrap;
   }
+}
 
+@media (max-width: 720px) {
   .hero-content h1 {
     font-size: clamp(1.4rem, 7vw, 2.2rem);
   }
