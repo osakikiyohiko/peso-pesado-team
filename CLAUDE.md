@@ -37,6 +37,13 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
   `#navLinks`), e o modal de agendamento (`#modalOverlay`) que monta uma mensagem com os dados do
   formulário e abre o WhatsApp (`wa.me`) com o texto pré-preenchido ao enviar (em inglês quando
   `<html lang>` é `en`).
+  Também contém a verificação anti-robô (Cloudflare Turnstile, carregado só quando necessário):
+  os links de contato (`.contact-protected` + `data-contact`) não têm o endereço real no HTML e o
+  número do WhatsApp (`.whatsapp-number`) aparece mascarado até a pessoa passar pela verificação;
+  o botão de agendar também exige a verificação. O número fica em base64 no JS. A constante
+  `TURNSTILE_SITE_KEY` está com a chave de teste da Cloudflare (sempre aprova) e deve ser trocada
+  pela chave real do domínio. Como o site não tem servidor, o token do Turnstile não é validado
+  no backend: a proteção barra robôs simples, não é absoluta.
 - `img/` — imagens usadas pelo site (logo, fotos dos professores, foto da turma), referenciadas
   com nomes simples para evitar espaços em URLs.
 - `Imagens/` — material-fonte original enviado (logo, foto do professor, foto da turma e a
