@@ -24,12 +24,18 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
 - `index.html` — única página do site, dividida em seções por `id` (`#sobre`, `#modalidades`,
   `#fundador`, `#professores`, `#horarios`, `#localizacao`, `#contato`) referenciadas pelo menu
   de navegação.
+- `en.html` — versão em inglês de `index.html`, com a mesma estrutura e os mesmos `id`s. O
+  seletor de idioma (`.lang-switch`, bandeiras `img/flag-br.svg` e `img/flag-us.svg` no
+  cabeçalho) alterna entre as duas páginas; a bandeira do idioma atual leva
+  `aria-current="page"`. Qualquer mudança de conteúdo em `index.html` (professores, horários
+  etc.) deve ser replicada, traduzida, em `en.html`. A `privacidade.html` existe só em português.
 - `css/style.css` — todo o estilo, usando variáveis CSS em `:root` para cores (tema escuro com
   destaque em amarelo/dourado, cor predominante da equipe). Breakpoint responsivo único em
   `720px` para o menu mobile.
 - `js/script.js` — comportamentos da página: ano do rodapé, toggle do menu mobile (`.open` em
   `#navLinks`), e o modal de agendamento (`#modalOverlay`) que monta uma mensagem com os dados do
-  formulário e abre o WhatsApp (`wa.me`) com o texto pré-preenchido ao enviar.
+  formulário e abre o WhatsApp (`wa.me`) com o texto pré-preenchido ao enviar (em inglês quando
+  `<html lang>` é `en`).
 - `img/` — imagens usadas pelo site (logo, fotos dos professores, foto da turma), referenciadas
   com nomes simples para evitar espaços em URLs.
 - `Imagens/` — material-fonte original enviado (logo, foto do professor, foto da turma e a

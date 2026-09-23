@@ -53,11 +53,15 @@ if (scheduleTriggers.length) {
     const telefone = document.getElementById('telefone').value.trim();
     const email = document.getElementById('email').value.trim();
 
-    const mensagem =
-      'Olá! Gostaria de agendar uma aula experimental gratuita.\n\n' +
-      `Nome: ${nome}\n` +
-      `Telefone: ${telefone}\n` +
-      `E-mail: ${email}`;
+    const mensagem = document.documentElement.lang.startsWith('en')
+      ? 'Hello! I would like to schedule a free trial class.\n\n' +
+        `Name: ${nome}\n` +
+        `Phone: ${telefone}\n` +
+        `E-mail: ${email}`
+      : 'Olá! Gostaria de agendar uma aula experimental gratuita.\n\n' +
+        `Nome: ${nome}\n` +
+        `Telefone: ${telefone}\n` +
+        `E-mail: ${email}`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
