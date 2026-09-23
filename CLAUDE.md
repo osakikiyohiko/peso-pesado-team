@@ -28,7 +28,8 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
   seletor de idioma (`.lang-switch`, bandeiras `img/flag-br.svg` e `img/flag-us.svg` no
   cabeçalho) alterna entre as duas páginas; a bandeira do idioma atual leva
   `aria-current="page"`. Qualquer mudança de conteúdo em `index.html` (professores, horários
-  etc.) deve ser replicada, traduzida, em `en.html`. A `privacidade.html` existe só em português.
+  etc.) deve ser replicada, traduzida, em `en.html`. A política de privacidade segue o
+  mesmo esquema: `privacidade.html` (português) e `privacy.html` (inglês).
 - `css/style.css` — todo o estilo, usando variáveis CSS em `:root` para cores (tema escuro com
   destaque em amarelo/dourado, cor predominante da equipe). Breakpoint responsivo único em
   `720px` para o menu mobile.
