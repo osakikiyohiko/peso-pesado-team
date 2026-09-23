@@ -27,9 +27,8 @@ const CONTACT_URLS = {
 };
 
 // Verificação anti-robô (Cloudflare Turnstile)
-// Chave de teste oficial da Cloudflare: sempre aprova e funciona em qualquer domínio.
-// Trocar pela site key real criada no painel da Cloudflare para o domínio do site.
-const TURNSTILE_SITE_KEY = '1x00000000000000000000AA';
+// Site key pública do widget criado no painel da Cloudflare; só funciona nos domínios cadastrados lá.
+const TURNSTILE_SITE_KEY = '0x4AAAAAAFBdflfGJpBXMsuQ';
 
 const VERIFY_TEXTS = isEnglish
   ? {

@@ -41,8 +41,9 @@ Depois acesse `http://localhost:8000`. Também é possível abrir `index.html` d
   os links de contato (`.contact-protected` + `data-contact`) não têm o endereço real no HTML e o
   número do WhatsApp (`.whatsapp-number`) aparece mascarado até a pessoa passar pela verificação;
   o botão de agendar também exige a verificação. O número fica em base64 no JS. A constante
-  `TURNSTILE_SITE_KEY` está com a chave de teste da Cloudflare (sempre aprova) e deve ser trocada
-  pela chave real do domínio. Como o site não tem servidor, o token do Turnstile não é validado
+  `TURNSTILE_SITE_KEY` tem a site key real, que só funciona nos domínios cadastrados no widget do
+  painel da Cloudflare (para testar localmente, `localhost` precisa estar cadastrado lá, ou usar
+  temporariamente a chave de teste `1x00000000000000000000AA`, que sempre aprova). Como o site não tem servidor, o token do Turnstile não é validado
   no backend: a proteção barra robôs simples, não é absoluta.
 - `img/` — imagens usadas pelo site (logo, fotos dos professores, foto da turma), referenciadas
   com nomes simples para evitar espaços em URLs.
